@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>自己紹介 | 齋藤 千枝歌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-8xG8eKx0w1T3l2gYqO/3D9K1T4B0/7QOQwGQd11b5o9K1fVXq7WoyD1X9h9m9rGgJb0sQW8i+6I0sQd4Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --panel: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --accent: #0f766e;
+      --accent-2: #0ea5a5;
+      --line: #e5e7eb;
+      --shadow: 0 24px 48px rgba(15, 23, 42, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(900px 500px at 10% -10%, rgba(14,165,165,0.18), transparent 60%),
+                  radial-gradient(700px 400px at 90% -20%, rgba(15,118,110,0.15), transparent 60%),
+                  var(--bg);
+      min-height: 100svh;
+      padding: 40px 20px 56px;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: var(--panel);
+      border-radius: 20px;
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+    .name {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 700;
+      margin: 0 0 6px;
+      letter-spacing: 0.02em;
+    }
+    .tagline {
+      font-size: clamp(16px, 2.4vw, 20px);
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-family: "IBM Plex Sans", "Zen Kaku Gothic New", system-ui, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 20px 22px 22px;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(130deg, rgba(14,165,165,0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(15,118,110,0.12);
+      color: var(--accent);
+      font-size: 16px;
+      flex: none;
+    }
+    .section-title {
+      font-weight: 700;
+    }
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--ink);
+      display: grid;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .list strong {
+      color: var(--ink);
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(14,165,165,0.12);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    @media (max-width: 640px) {
+      body { padding: 28px 14px 40px; }
+      .hero { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero" aria-label="自己紹介">
+      <p class="subtitle">Profile</p>
+      <h1 class="name">齋藤 千枝歌</h1>
+      <p class="tagline">専門：古代ギリシャ哲学</p>
+      <span class="pill"><i class="fa-solid fa-sparkles"></i> Classics × AI</span>
+    </section>
+
+    <section class="grid" aria-label="主要領域">
+      <article class="card">
+        <h2><span class="icon"><i class="fa-solid fa-scroll"></i></span><span class="section-title">Research</span></h2>
+        <ul class="list">
+          <li><strong>テーマ:</strong> アリストテレス『ニコマコス倫理学』における快楽論</li>
+          <li><strong>背景:</strong> 高校時代の功利主義への疑問から、「人間がよりよく生きるにはどうしたらいいのか」を探求。</li>
+          <li><strong>研究の軌跡:</strong> プラトン『ゴルギアス』（卒論） → アリストテレス（現在）。</li>
+          <li><strong>目標:</strong> 快楽が良い活動にどう関わるかを明らかにし、アリストテレス倫理学の現代的意義を示す。</li>
+          <li><strong>現代的意義:</strong> 状況に応じた的確な判断力「中庸」を現代社会に提示する。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2><span class="icon"><i class="fa-solid fa-brain"></i></span><span class="section-title">AI Project</span></h2>
+        <ul class="list">
+          <li><strong>プロジェクト名:</strong> 「ANIMA ANTIQUA －古典に息吹を－」</li>
+          <li><strong>活動:</strong> 古典の言葉をAIで視覚詩化するプロジェクト。</li>
+          <li><strong>役割:</strong> ラフスケッチを基にAIでイラスト・アニメーションを生成。</li>
+          <li><strong>今後の目標:</strong> Pythonを学習し、本格的にAI技術を探求。</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2><span class="icon"><i class="fa-solid fa-language"></i></span><span class="section-title">Languages</span></h2>
+        <ul class="list">
+          <li><strong>学習中の言語:</strong> 英語、古典ギリシャ語、ラテン語、ドイツ語</li>
+          <li><strong>成果:</strong> ドイツ語検定3級取得。</li>
+          <li><strong>目標:</strong></li>
+          <li class="muted">ラテン語：ルクレティウスなどの哲学文献を読解。</li>
+          <li class="muted">ドイツ語：古代哲学の二次文献読解と日常会話。</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
